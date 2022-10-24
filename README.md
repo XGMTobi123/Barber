@@ -1,4 +1,4 @@
-Responsive landing based on Laravel and Vue
+Responsive landing based on Laravel and Vue (Gup template)
 
 How to start:
 
