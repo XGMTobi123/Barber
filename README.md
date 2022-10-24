@@ -13,5 +13,4 @@ How to start:
 - `php artisan serve`
 
 Features: 
-- You can add feedback in /admin panel (login: `root@root.com`, password: `password`)
-Be sure image is exist in /resources/img/
+- You can add feedback in /admin panel (login: `root@root.com`, password: `password`). Be sure image is exist in /resources/img/
