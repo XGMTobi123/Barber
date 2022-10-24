@@ -24,6 +24,7 @@
                 .row.justify-content-center
                     .col-12.text-center
                         p It is a long established fact that a reader will be distracted by the readable
+                        p (C)
                 hr
 </template>
 
