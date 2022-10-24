@@ -9,4 +9,5 @@ How to start:
 - Copy .env.example to .env
 - Check database settings
 - `php artisan migrate`
+- `npm run watch`
 - `php artisan serve`
