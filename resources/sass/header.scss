@@ -1,0 +1,65 @@
+.navbar {
+    --bs-navbar-padding-y: 0 !important;
+}
+
+.logo {
+    width: auto;
+    height: 85px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 85px;
+    height: 85px;
+    background: url("../img/Logo.png") no-repeat center top / cover;
+}
+
+.logo__text {
+    color: $lightblue;
+    margin: 15% 0 0 -14%;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 133.6%;
+}
+.profile {
+    width: 42px;
+    height: 42px;
+}
+
+@media (min-width: 576px) {
+    .logo{
+        width: 180px;
+    }
+}
+
+.notification {
+    width: 42px;
+    height: 42px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0 0 0 10%;
+    padding: 0;
+}
+
+.navbar li {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 133.6%;
+    padding: 80px 14px 8px 14px;
+    margin:0 2px 0 2px;
+}
+
+.navbar li:hover, .navbar li .active {
+    background: $background-lightblue;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    cursor: pointer;
+}
+//.header{
+//    margin-bottom: 50px;
+//}
+
