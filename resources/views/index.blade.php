@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <app-header></app-header>
+    <Index></Index>
     <get-started></get-started>
     <history-service></history-service>
     <feedback></feedback>

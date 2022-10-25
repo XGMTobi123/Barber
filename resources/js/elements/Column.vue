@@ -1,14 +1,12 @@
 <template lang="pug">
-    .container(:class="classCss", :style="styleCss")
+    .col(:class="classCss", :style="styleCss")
         slot
 </template>
 
 <script>
-
     import ComputedElements from '@/js/computed/Elements'
-
     export default {
-        name: "Container",
+        name: "ColumnElement",
         props: ['classCss', 'styleCss']
     }
 </script>

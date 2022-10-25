@@ -1,13 +1,21 @@
-<template>
-    $END$
+<template lang="pug">
+    .row(:class="classCss" :style="styleCss")
+        slot
 </template>
 
 <script>
+
+    import ComputedElements from '@/js/computed/Elements'
+
     export default {
-        name: "Row"
+        name: "RowElement",
+        props: ['classCss', 'styleCss'],
+        // computed:
+        //     {
+        //         ...ComputedElements
+        //     }
     }
 </script>
 
-<style scoped>
-
+<style lang="scss">
 </style>

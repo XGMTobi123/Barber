@@ -45,7 +45,7 @@
     padding: 0;
 }
 
-.navbar li {
+.navbar .list__item {
     font-weight: 500;
     font-size: 25px;
     line-height: 133.6%;
@@ -53,7 +53,7 @@
     margin:0 2px 0 2px;
 }
 
-.navbar li:hover, .navbar li .active {
+.navbar .list__item:hover, .navbar .list__item .active {
     background: $background-lightblue;
     border-radius: 0 0 5px 5px;
     color: white;
