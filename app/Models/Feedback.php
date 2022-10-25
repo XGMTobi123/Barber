@@ -17,7 +17,7 @@ class Feedback extends Model
     */
 
     protected $table = 'feedback';
-    // protected $primaryKey = 'id';
+    protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
     // protected $fillable = [];
@@ -29,12 +29,6 @@ class Feedback extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-    //TODO delete
-    public static function getAllFeedbacksDataJSON()
-    {
-        $collection = DB::select("select name, feedback, img from feedback");
-        return json_encode($collection);
-    }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS
