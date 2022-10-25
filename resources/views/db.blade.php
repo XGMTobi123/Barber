@@ -1,3 +1,3 @@
 @php
-echo \App\Models\Feedback::getAllFeedbacksDataJSON();
+echo \App\Http\Controllers\Admin\FeedbackCrudController::getAllFeedbacksDataJSON();
 @endphp

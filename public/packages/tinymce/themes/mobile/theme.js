@@ -4616,7 +4616,7 @@
       var outcome = substituteAll(owner, detail, components, ps);
       each(ps, function (p) {
         if (p.used() === false && p.required()) {
-          throw new Error('Placeholder: ' + p.name() + ' was not found in components list\nNamespace: ' + owner.getOr('none') + '\nComponents: ' + JSON.stringify(detail.components, null, 2));
+          throw new Error('Placeholder: ' + p.name() + ' was not found in blocks list\nNamespace: ' + owner.getOr('none') + '\nComponents: ' + JSON.stringify(detail.components, null, 2));
         }
       });
       return outcome;
@@ -10780,8 +10780,8 @@
     var factory$1 = function (detail, components, _spec, _externals) {
       var setGroups = function (toolbar, groups) {
         getGroupContainer(toolbar).fold(function () {
-          console.error('Toolbar was defined to not be a shell, but no groups container was specified in components');
-          throw new Error('Toolbar was defined to not be a shell, but no groups container was specified in components');
+          console.error('Toolbar was defined to not be a shell, but no groups container was specified in blocks');
+          throw new Error('Toolbar was defined to not be a shell, but no groups container was specified in blocks');
         }, function (container) {
           Replacing.set(container, groups);
         });

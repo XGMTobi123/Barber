@@ -6452,7 +6452,7 @@
       var outcome = substituteAll(owner, detail, components, ps);
       each(ps, function (p) {
         if (p.used() === false && p.required()) {
-          throw new Error('Placeholder: ' + p.name() + ' was not found in components list\nNamespace: ' + owner.getOr('none') + '\nComponents: ' + JSON.stringify(detail.components, null, 2));
+          throw new Error('Placeholder: ' + p.name() + ' was not found in blocks list\nNamespace: ' + owner.getOr('none') + '\nComponents: ' + JSON.stringify(detail.components, null, 2));
         }
       });
       return outcome;
@@ -14402,7 +14402,7 @@
       var getOrCreate = function (component, coupleConfig, name) {
         var available = keys(coupleConfig.others);
         if (!available) {
-          throw new Error('Cannot find coupled component: ' + name + '. Known coupled components: ' + JSON.stringify(available, null, 2));
+          throw new Error('Cannot find coupled component: ' + name + '. Known coupled blocks: ' + JSON.stringify(available, null, 2));
         } else {
           return get$e(coupled, name).getOrThunk(function () {
             var builder = get$e(coupleConfig.others, name).getOrDie('No information found for coupled component: ' + name);
@@ -22288,8 +22288,8 @@
     var factory$d = function (detail, components, _spec, _external) {
       var setItems = function (list, items) {
         getListContainer(list).fold(function () {
-          console.error('Custom List was defined to not be a shell, but no item container was specified in components');
-          throw new Error('Custom List was defined to not be a shell, but no item container was specified in components');
+          console.error('Custom List was defined to not be a shell, but no item container was specified in blocks');
+          throw new Error('Custom List was defined to not be a shell, but no item container was specified in blocks');
         }, function (container) {
           var itemComps = Replacing.contents(container);
           var numListsRequired = items.length;
@@ -22356,8 +22356,8 @@
     var factory$c = function (detail, components, _spec, _externals) {
       var setGroups = function (toolbar, groups) {
         getGroupContainer(toolbar).fold(function () {
-          console.error('Toolbar was defined to not be a shell, but no groups container was specified in components');
-          throw new Error('Toolbar was defined to not be a shell, but no groups container was specified in components');
+          console.error('Toolbar was defined to not be a shell, but no groups container was specified in blocks');
+          throw new Error('Toolbar was defined to not be a shell, but no groups container was specified in blocks');
         }, function (container) {
           Replacing.set(container, groups);
         });

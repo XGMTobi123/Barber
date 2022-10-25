@@ -8,8 +8,8 @@
                     ColumnElement(classCss="col-lg-6 col-md-9")
                         ListElement(type="" :items="list")
                 ColumnElement(classCss="col-md-4 align-items-center justify-content-xl-between d-none d-lg-flex")
-                    ImageElement(:src="img.shift()" alt='profile' class-css="profile")
-                    ImageElement(:src="img.shift()" alt='notification' class-css="notification")
+                    ImageElement(:src="img[0]" alt='profile' class-css="profile")
+                    ImageElement(:src="img[1]" alt='notification' class-css="notification")
                     .button Appointment
 </template>
 
