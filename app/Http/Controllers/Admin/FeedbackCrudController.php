@@ -85,4 +85,15 @@ class FeedbackCrudController extends CrudController
         $this->setupCreateOperation();
     }
 
+    public static function getAllFeedbacksDataJSON()
+    {
+        foreach (Feedback::select('name', 'feedback as text', 'img')->get() as $feedbacks){
+            $feedback[] = [
+                "name"=>$feedbacks->name,
+                "feedback"=>$feedbacks->text,
+                "img"=>$feedbacks->img
+            ];
+        }
+        return json_encode($feedback ?? "Database select error");
+    }
 }
