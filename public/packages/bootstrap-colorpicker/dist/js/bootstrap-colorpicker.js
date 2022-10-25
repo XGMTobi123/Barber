@@ -2967,7 +2967,7 @@ var Colorpicker = function () {
       // Inject into the DOM (this may make it visible)
       this.pickerHandler.attach();
 
-      // Update all components
+      // Update all blocks
       this.update();
 
       if (this.inputHandler.isDisabled()) {
