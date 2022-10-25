@@ -9,23 +9,25 @@ window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
+ * Vue blocks. It will recursively scan this directory for the Vue
+ * blocks and automatically register them with their "basename".
  *
- * Eg. ./components/Header.vue -> <example-component></example-component>
+ * Eg. ./blocks/Header.vue -> <example-component></example-component>
  */
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('app-header', require('./components/Header.vue').default);
-Vue.component('get-started', require('./components/get-started.vue').default);
-Vue.component('history-service', require('./components/history-service.vue').default);
-Vue.component('gallery-footer',require('./components/gallery-footer.vue').default);
-Vue.component('feedback',require('./components/feedback.vue').default);
+// Vue.component('app-header', require('./blocks/Header.vue').default);
+Vue.component('get-started', require('./blocks/get-started.vue').default);
+Vue.component('history-service', require('./blocks/history-service.vue').default);
+Vue.component('gallery-footer',require('./blocks/gallery-footer.vue').default);
+Vue.component('feedback',require('./blocks/feedback.vue').default);
+Vue.component('index', require('@/js/pages/Index.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
+ * the page. Then, you may begin adding blocks to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
