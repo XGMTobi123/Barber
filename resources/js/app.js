@@ -6,6 +6,8 @@
 
 require('./bootstrap');
 window.Vue = require('vue').default;
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 
 /**
  * The following block of code may be used to automatically register your
