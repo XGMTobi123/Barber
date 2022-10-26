@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use App\Http\Controllers\SubscriberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/a', function () {
     return view('welcome');
@@ -20,10 +22,7 @@ Route::get('/db', function () {
     return view('db');
 });
 
-//Route::get('/', function (){
-//    return view('index');
-//});
-
-Auth::routes();
+Route::post('/mail', [SubscriberController::class, 'subscribe']);
 
 Route::any("/", [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+//Route::any("/mail", [\App\Http\Controllers\SendMailController::class, 'mail'])->name('mail');

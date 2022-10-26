@@ -10,7 +10,8 @@
                 ColumnElement(classCss="col-md-4 align-items-center justify-content-xl-between d-none d-lg-flex")
                     ImageElement(:src="img[0]" alt='profile' class-css="profile")
                     ImageElement(:src="img[1]" alt='notification' class-css="notification")
-                    .button Appointment
+                    button.button(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal') Appointment
+                    ModalElement
 </template>
 
 <script>
@@ -21,12 +22,13 @@
     import LogoElement from "../elements/Logo";
     import ListElement from "../elements/List";
     import ImageElement from "../elements/Image";
+    import ModalElement from "@/js/elements/Modal";
 
     export default {
         name: "HeaderBlock",
         components: {
             ImageElement,
-            ListElement, LogoElement, ColumnElement, ContainerElement, RowElement
+            ListElement, LogoElement, ColumnElement, ContainerElement, RowElement, ModalElement
         },
         data() {
             return {
